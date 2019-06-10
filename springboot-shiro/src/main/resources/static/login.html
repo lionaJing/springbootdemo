@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+</head>
+<body>
+<div id="app" class="container mt-3" style="text-align: -webkit-center;">
+    <div style="width: 30%;margin-top: 100px;">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">账户</span>
+            </div>
+            <input v-bind:value="username" autocomplete="off" type="text" class="form-control" placeholder="username" name="username">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">密码</span>
+            </div>
+            <input v-bind:value="password" autocomplete="off" type="password" class="form-control" placeholder="password" name="username">
+        </div>
+        <button @click="login" type="submit" class="btn btn-primary btn-block">登录</button>
+    </div>
+</div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="login.js"></script>
+</html>

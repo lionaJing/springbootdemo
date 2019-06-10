@@ -1,0 +1,12 @@
+my:
+ name: Jack
+ age: 666
+ number: ${random.int}
+ uuid: ${random.uuid}
+ profiles: dev
+ other: ${my.name} home is CHINA
+
+---
+
+ spring:
+   profiles: dev

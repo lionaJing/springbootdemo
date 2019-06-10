@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">test</title>
+</head>
+<body>
+<h2>=============</h2>
+<p>
+    <span>HTTP状态码:</span>
+    <span th:text="${status}"></span>
+</p>
+<p>
+    <span>错误原因:</span>
+    <span th:text="${error}"></span>
+</p>
+<p>
+    <span>异常消息:</span>
+    <span th:text="${message}"></span>
+</p>
+<p>
+    <span>异常时间:</span>
+    <span th:text="${timestamp}"></span>
+</p>
+</body>
+</html>
