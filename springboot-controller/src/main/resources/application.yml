@@ -2,3 +2,24 @@
 #  error:
 #   whitelabel:
 #    enabled: false
+
+spring:
+  profiles:
+    # 指定激活的环境
+#    active: prod
+  thymeleaf:
+    cache: false  # 清除缓存
+    mode: HTML5   # 模板模式
+    encoding: UTF-8
+  servlet:
+    multipart:
+      location: D:\workspace\java_1\springbootdemo\springboot-controller\src\main\resources\static\temp
+      enabled: true
+server:
+  port: 8080
+  tomcat:
+    basedir: D:\workspace\java_1\springbootdemo\springboot-controller\src\main\resources\static\temp
+  servlet:
+    context-path: /app
+location:
+  tempDir: D:\workspace\java_1\springbootdemo\springboot-controller\src\main\resources\static\temp
