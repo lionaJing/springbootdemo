@@ -1,8 +1,8 @@
 package com.lemon.interceptor;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +15,7 @@ import java.util.List;
  * Created by lemon
  */
 @Component
-public class ErrorPageInterceptor extends HandlerInterceptorAdapter {
+public class ErrorPageInterceptor implements HandlerInterceptor {
     private List<Integer> errorCodeList = Arrays.asList(404, 403, 500, 501);
     @Override
     public boolean preHandle(HttpServletRequest request,
@@ -38,7 +38,7 @@ public class ErrorPageInterceptor extends HandlerInterceptorAdapter {
                            Object handler,
                            ModelAndView modelAndView) throws Exception {
         //可以修改ModelAndView
-        super.postHandle(request, response, handler, modelAndView);
+//        super.postHandle(request, response, handler, modelAndView);
     }
 
     @Override
@@ -47,6 +47,6 @@ public class ErrorPageInterceptor extends HandlerInterceptorAdapter {
                                 Object handler,
                                 Exception ex) throws Exception {
         //可以根据ex是否为null判断是否发生了异常，进行日志记录。
-        super.afterCompletion(request, response, handler, ex);
+//        super.afterCompletion(request, response, handler, ex);
     }
 }
